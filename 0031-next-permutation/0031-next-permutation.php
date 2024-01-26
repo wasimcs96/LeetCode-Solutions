@@ -7,7 +7,7 @@ class Solution {
     function nextPermutation(&$nums) {
         //2,1,5,4,3,0,0
         //2,3,0,0,1,4,5
-        $swapfirstIndex = "";
+        $swapfirstIndex = ""; 
         $swapSecondIndex = "";
         
         for($i=count($nums)-2;$i>=0;$i--){
