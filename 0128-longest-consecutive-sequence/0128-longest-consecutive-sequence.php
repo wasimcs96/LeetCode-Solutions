@@ -34,7 +34,7 @@ class Solution {
         
 //         return $maxCount;
 
-        
+        ///both approch working fine as same Comp.
         $l=count($nums)-1; 
         if($l < 0) return 0;
         $hash = [];
