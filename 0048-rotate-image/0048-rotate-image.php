@@ -26,5 +26,14 @@ class Solution {
           $i++; $j--;
         }
       }
+        
+        //for anticlockwise
+// for($j=0;$j<$row;$j++){ 
+//       $up=0; $down = $row-1;
+//       while($up<$down){
+//         list($matrix[$down][$j], $matrix[$up][$j]) = [$matrix[$up][$j], $matrix[$down][$j]];
+//         $up++; $down--;
+//       }
+//     }
     }
 }
