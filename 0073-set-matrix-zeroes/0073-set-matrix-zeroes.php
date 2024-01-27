@@ -22,6 +22,44 @@ class Solution {
         $rowColum = explode('-', $value);
         $this->makeZero($rowColum[0], $rowColum[1], $row, $col, $matrix);
       }
+        
+//         $row = count($matrix);
+//     $col = count($matrix[0]);
+    
+//     $col0 = 1;
+//     for($i = 0; $i < $row; $i++){
+//       for($j = 0; $j < $col; $j++){
+//         if($matrix[$i][$j] == 0){
+//           $matrix[$i][0] = 0;
+//           if($j != 0){
+//             $matrix[0][$j] = 0;
+//           }else{
+//             $col0 = 0;
+//           }
+//         }
+//       }
+//     }
+
+//     for($i = 1; $i < $row; $i++){
+//       for($j = 1; $j < $col; $j++){
+//         if($matrix[$i][$j] != 0){
+//           if($matrix[$i][0] == 0 || $matrix[0][$j] == 0){
+//             $matrix[$i][$j] = 0;
+//           }
+//         }
+//       }
+//     }
+//     if($matrix[0][0] == 0){
+//       for($j = 0; $j < $col; $j++){
+//         $matrix[0][$j] = 0;
+//       }
+//     }
+
+//     if ($col0 === 0) {
+//       for($i = 1; $i < $row; $i++){
+//         $matrix[$i][0] = 0;
+//       }
+//     }
     }
 
     function makeZero($ic, $jc, $row, $col, &$num){
