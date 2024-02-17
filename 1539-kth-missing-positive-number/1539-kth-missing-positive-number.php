@@ -15,7 +15,6 @@ class Solution {
             else
                 $high = $mid-1;
         }
-        
         return $high+1+$k;
     }
 }
