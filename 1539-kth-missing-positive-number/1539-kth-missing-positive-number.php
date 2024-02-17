@@ -7,7 +7,6 @@ class Solution {
      */
     function findKthPositive($arr, $k) {
         $low = 0; $high = count($arr)-1;
-        
         while($low <= $high){
             $mid = (int)(($low+$high)/2);
             $remainingMissingNumber = $arr[$mid] - ($mid+1);
