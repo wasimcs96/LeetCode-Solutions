@@ -6,11 +6,11 @@ class Solution {
      * @return Integer
      */
     function maxDistance($position, $m) {
-            sort($position);
+          sort($position);
           $length = count($position);
-          $limit = max($position)-min($position); //valuue must be range  of stall number.   0->10 in this we can get min distanse
+          $limit = max($position)-min($position); //valuue must be range  of stall number.   1->6 in this we can get min distanse
           // for($i = 1; $i <= $limit; $i++) {
-          //   if($this->canputCows($position, $m, $i) == false){
+          //   if($this->canPutBalls($position, $m, $i) == false){
           //     return $i-1;
           //   }
           // }
@@ -20,7 +20,7 @@ class Solution {
           $min = 1; $high = $limit;
           while($min<=$high){
                 $mid = (int)(($min+$high)/2);
-                if($this->canputCows($position, $m, $mid) == true){ //check for value mid we can put all 4 cows in arr => mid 1,2,3 give true but for 4 we can not put all cows in arr 
+                if($this->canPutBalls($position, $m, $mid) == true){ //check for value mid we can put all 4 cows in arr => mid 1,2,3 give true but for 4 we can not put all cows in arr 
               $min = $mid+1;
                 }else{
                     $high = $mid-1;
@@ -29,7 +29,7 @@ class Solution {
             return $high;
   
     }
-    function canputCows($arr, $cow, $minDistance){ //0,3,4,7,10,9
+    function canPutBalls($arr, $cow, $minDistance){ //0,3,4,7,10,9
         $last = $arr[0]; $length = count($arr)-1;
         $cntCows = 1;// no. of cows placed
         for($j = 1; $j <= $length; $j++){
