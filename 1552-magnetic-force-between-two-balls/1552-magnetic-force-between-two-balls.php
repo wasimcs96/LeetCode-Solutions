@@ -20,7 +20,7 @@ class Solution {
           $min = 1; $high = $limit;
           while($min<=$high){
                 $mid = (int)(($min+$high)/2);
-                if($this->canPutBalls($position, $m, $mid) == true){ //check for value mid we can put all 4 cows in arr => mid 1,2,3 give true but for 4 we can not put all cows in arr 
+                if($this->canPutBalls($position, $m, $mid) == true){ //check for value mid we can put all 3 balls in arr => mid 1,2,3 give true but for 4 we can not put all balls in arr basket 
               $min = $mid+1;
                 }else{
                     $high = $mid-1;
@@ -31,7 +31,7 @@ class Solution {
     }
     function canPutBalls($arr, $cow, $minDistance){ //0,3,4,7,10,9
         $last = $arr[0]; $length = count($arr)-1;
-        $cntCows = 1;// no. of cows placed
+        $cntCows = 1;// no. of balls placed
         for($j = 1; $j <= $length; $j++){
             if($arr[$j]-$last >= $minDistance){ //3-0=3 > 1 so true then check  next condition 4-3 = 1 >=1 and so on
             $cntCows++;
