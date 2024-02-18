@@ -6,6 +6,10 @@ class Solution {
      * @return Integer
      */
     function maxDistance($position, $m) {
+            //Apprach
+            //1. find range which is max-min
+            //2. check we can put balls in basket for range value
+        
           sort($position);
           $length = count($position);
           $limit = max($position)-min($position); //valuue must be range  of stall number.   1->6 in this we can get min distanse
