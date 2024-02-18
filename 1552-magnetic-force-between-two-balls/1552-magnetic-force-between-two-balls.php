@@ -33,13 +33,13 @@ class Solution {
             return $high;
   
     }
-    function canPutBalls($arr, $cow, $minDistance){ //0,3,4,7,10,9
+    function canPutBalls($arr, $cow, $minDistance){ //1,2,3,4,7
         $last = $arr[0]; $length = count($arr)-1;
         $cntCows = 1;// no. of balls placed
         for($j = 1; $j <= $length; $j++){
-            if($arr[$j]-$last >= $minDistance){ //3-0=3 > 1 so true then check  next condition 4-3 = 1 >=1 and so on
+            if($arr[$j]-$last >= $minDistance){ //2-1=1 => 1 so true then check  next condition 3-2 >= 1 >=1 and so on
             $cntCows++;
-            $last = $arr[$j]; //0=>3 , first two index
+            $last = $arr[$j]; //1=>2 , first two index
         }
         if($cntCows >= $cow) return true;
         }
