@@ -17,7 +17,7 @@ class Solution {
         while($min <= $max ){
           $mid = (int)(($min + $max) / 2);
           if($this->canSplitArray($nums, $k, $mid)){
-            $min = $mid+1;
+            $min = $mid+1; 
           }else{
             $max = $mid-1;
           }
