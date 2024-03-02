@@ -21,8 +21,8 @@ class Solution {
           $low = 0; $high = $n*$m - 1;
           while ($low <= $high) {
             $mid = (int)(($low+$high) / 2);
-            $row = (int) ($mid / $m);
-            $col = (int) ($mid % $m);
+            $row = (int) ($mid / $m); //remember
+            $col = (int) ($mid % $m); ////remember
             if($mat[$row][$col] == $target) return true;
             elseif($mat[$row][$col] < $target) $low = $mid+1;
             else $high = $mid-1;
