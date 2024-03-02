@@ -6,17 +6,18 @@ class Solution {
      * @return Boolean
      */
     function searchMatrix($matrix, $target) {
-        $n = count($matrix); $m = count($matrix[0]); 
-        return $this->getSearchValue($matrix, $n, $m, $target);
+        return $this->getSearchValue($matrix, $target);
     }
     
-    function getSearchValue($mat, $n, $m, $target){
+    function getSearchValue($mat, $target){
       // $ans = false;
+       // $n = count($mat)-1; $m = count($mat[0])-1;
       // $getRowValue = $this->getRowValue($mat, $n, $m, $k);
       // if($getRowValue == -1) return false;
       // return $this->binerySearch($mat, $n, $m, $k, $getRowValue);
         
           $ans = false;
+          $n = count($mat); $m = count($mat[0]);
           $low = 0; $high = $n*$m - 1;
           while ($low <= $high) {
             $mid = (int)(($low+$high) / 2);
