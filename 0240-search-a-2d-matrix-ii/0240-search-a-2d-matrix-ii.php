@@ -10,7 +10,7 @@ class Solution {
     }
     
     function getSearchValue($mat, $target){
-        //you can any corner from matrix , according corner row and col value will be chnage.
+        //you can choose any corner from matrix , according corner row and col value will be chnage as per condition
         $ans = false; $n = count($mat)-1; $m = count($mat[0])-1;
         $row = $n;$col = 0; //start from 18 and flow if less target then cot++
         while ($row >= 0  && $col <= $m) {
