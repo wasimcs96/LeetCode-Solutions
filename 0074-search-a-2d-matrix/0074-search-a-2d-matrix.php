@@ -15,7 +15,7 @@ class Solution {
       // $getRowValue = $this->getRowValue($mat, $n, $m, $k);
       // if($getRowValue == -1) return false;
       // return $this->binerySearch($mat, $n, $m, $k, $getRowValue);
-        
+      //   OR faster then upper code
           $ans = false;
           $n = count($mat); $m = count($mat[0]);
           $low = 0; $high = $n*$m - 1;
