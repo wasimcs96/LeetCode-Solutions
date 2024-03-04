@@ -17,7 +17,7 @@ class Solution {
           $rotation++;
         }
 
-        //$s .= $s; //abc => abcabc ans gaol=cba , bca exits in abcabc
+        //$s .= $s; //abc => abcabc and gaol=cba , bca exits in abcabc
         //return strpos($s,$goal) !== false; //u can use for loop to get bca in string
         return false;
     }
