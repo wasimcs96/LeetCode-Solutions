@@ -33,6 +33,8 @@ class Solution {
           }
         }
         return $longestPalindromeStr;
+
+        //Dynamic approch also here
     }
     
     function getExpendStr($s, $left, $right){
