@@ -23,8 +23,9 @@ class Solution {
         for($i=0;$i<$strLength;$i++){
           $temp = ""; 
           $expendStr1 = $this->getExpendStr($s, $i, $i);
+          echo "1-".$expendStr1."<BR>";
           $expendStr2 = $this->getExpendStr($s, $i, $i+1);
-
+          echo "2-".$expendStr2."<BR>";
           if(strlen($expendStr1) > strlen($expendStr2)){
             $longestPalindromeStr = (strlen($longestPalindromeStr) < strlen($expendStr1)) ? $expendStr1 : $longestPalindromeStr;
           }else{
