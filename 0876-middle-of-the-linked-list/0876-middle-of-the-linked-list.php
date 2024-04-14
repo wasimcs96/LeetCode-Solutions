@@ -16,16 +16,26 @@ class Solution {
      * @return ListNode
      */
     function middleNode($head) {
+        //2N approch
+        // if($head == null || $head->next == null) return $head;
+        // $currentNode = $head;
+        // $length = $this->getlengthLL($head);
+        // $midLength = floor ($length / 2);
+        // $counter = 1;
+        // while($counter <= $midLength){
+        //     $counter++;
+        //     $currentNode = $currentNode->next;
+        // }
+        // return $currentNode;
+        
+        //O(N) approch
         if($head == null || $head->next == null) return $head;
-        $currentNode = $head;
-        $length = $this->getlengthLL($head);
-        $midLength = floor ($length / 2);
-        $counter = 1;
-        while($counter <= $midLength){
-            $counter++;
-            $currentNode = $currentNode->next;
+        $slowPtr = $fastPtr = $head;
+        while($fastPtr != null && $fastPtr->next != null){
+            $slowPtr = $slowPtr->next;
+            $fastPtr = $fastPtr->next->next;
         }
-        return $currentNode;
+        return $slowPtr;
     }
 
     function getlengthLL($head){
