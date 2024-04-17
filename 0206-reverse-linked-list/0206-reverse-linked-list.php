@@ -17,17 +17,29 @@ class Solution {
      * @param ListNode $head
      * @return ListNode
      */
-    function reverseList($head) {
-        $this->head = $head;
-        if($this->head == null || $this->head->next == null) return $this->head;
-        $currentNode = $this->head; $prev = null;
-        while($currentNode != null){
-            $nextNode = $currentNode->next;
-            $currentNode->next = $prev;
-            $prev = $currentNode;
-            $currentNode = $nextNode;
-        }
-        $this->head = $prev;
-        return $this->head;
+    // function reverseList($head) {
+    //     $this->head = $head;
+    //     if($this->head == null || $this->head->next == null) return $this->head;
+    //     $currentNode = $this->head; $prev = null;
+    //     while($currentNode != null){
+    //         $nextNode = $currentNode->next;
+    //         $currentNode->next = $prev;
+    //         $prev = $currentNode;
+    //         $currentNode = $nextNode;
+    //     }
+    //     $this->head = $prev;
+    //     return $this->head;
+    // }
+    
+    function reverseList($head, $prev = null) {
+        if($head == null) return $prev;
+      
+        $currentNode = $head;
+        $nextNode = $currentNode->next;
+        $currentNode->next = $prev;
+
+        $prev = $currentNode;
+    
+        return $this->reverseList($nextNode, $prev);
     }
 }
