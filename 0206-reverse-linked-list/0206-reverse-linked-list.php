@@ -31,6 +31,7 @@ class Solution {
     //     return $this->head;
     // }
     
+    //Recursive Approch
     function reverseList($head, $prev = null) {
         if($head == null) return $prev;
       
