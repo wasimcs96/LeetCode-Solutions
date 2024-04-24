@@ -16,6 +16,7 @@ class Solution {
         //hash map approch if repeat element  found then it is a loop 
         //OR
         //Tortoise and Hare Algorithm approch
+        //spl_object_hash =>point to This function returns a unique identifier for the object
         $slowPtr = $head;
         $fastPtr = $head;
         if($fastPtr == null || $fastPtr->next == null) return false;
