@@ -40,5 +40,9 @@ class Solution {
             return true;
         }
         return false;
+        
+        //make a stack and perform push and pop opration at last if stack is empay then retur true
+        //compare half - half LL
+        //get mid point and make second half reverse and compare with first halft 
     }
 }
