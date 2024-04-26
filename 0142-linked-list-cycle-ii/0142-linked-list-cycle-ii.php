@@ -48,6 +48,12 @@ class Solution {
                 }
                 return $slowPtr;
             }
+            
+            //To find cycle  length, then use hashmap and every node store as key and counter as value counter value will be increment by one
+        //if hash value exits thne after increment of currentcounter - hashvalue , return value will be answer
+
+        //other approch  use extra space, not allowed then just after getting collide point of slow and fast
+        //and after just make fastptr move to one step and counter increase by one then it will meet again to slow then return counter is aswer 
         }
         return null;
     }
