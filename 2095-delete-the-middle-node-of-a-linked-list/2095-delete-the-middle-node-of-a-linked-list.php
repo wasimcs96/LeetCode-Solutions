@@ -25,11 +25,13 @@ class Solution {
             }
 
             $slowPtr = $fastPtr = $head;
+            $fastPtr = $fastPtr->next->next; //->second approch skip 1 step approch
+
             while($fastPtr != null && $fastPtr->next != null) {
                 $fastPtr = $fastPtr->next->next;
                 $slowPtr = $slowPtr->next ;
             }
-            $slowPtr->val = $slowPtr->next->val;
+            //$slowPtr->val = $slowPtr->next->val; //delete in second approch skip 1 step approch
             $slowPtr->next = $slowPtr->next->next;
             return $head;
         }
