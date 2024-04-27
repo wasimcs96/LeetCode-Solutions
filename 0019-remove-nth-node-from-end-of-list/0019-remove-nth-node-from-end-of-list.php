@@ -39,6 +39,8 @@ class Solution {
 //         return $head;
         
         //O(L) approch
+        //Maintain two pointers and update one with a delay of n steps.
+
         if(($head == null || $head->next == null) && $n == 1) return $head = null;
         $slowPtr = $head; $fastPtr = $head;
         for($i = 0; $i < $n; $i++){
