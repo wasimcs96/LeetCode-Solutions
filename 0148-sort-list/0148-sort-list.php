@@ -15,6 +15,12 @@ class Solution {
      * @param ListNode $head
      * @return ListNode
      */
+
+    //1 approch to sort, get LL values and make a array then
+    // sort array and fill in again existign LLS
+    // S(L) and T(log n)approch
+
+    //S(1) approch with T(n log n) approch
     function sortList($head) {
         if($head == null  || $head->next == null) return $head;
         //find middle
