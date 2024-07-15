@@ -9,8 +9,11 @@ class Solution {
         $sbin = $this->decToBin($start);
         $gbin = $this->decToBin($goal);
         $i=0; $count=0;
+        
+        //second approch
         //1010 ^ 0111 = 1101
         $ans = $start ^ $goal; //XOR tells us result bits have unmatched bit 1 => 1 ($start's bit), 0 ( $goal's bit)
+        
         while($i < 32){
             //if(($start & (1 << $i)) != ($goal & (1 << $i))) $count++;
             
