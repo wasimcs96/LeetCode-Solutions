@@ -8,31 +8,31 @@ class Solution {
     function myPow($x, $n) {
         if ($n == 0) return 1;
 
-        $result = 1.0;
-        $absN = abs($n);
+//         $result = 1.0;
+//         $absN = abs($n);
 
-        while ($absN > 0) {
-            if ($absN % 2 == 1) {
-                $result *= $x;
-            }
-            $x *= $x;
-            $absN = (int) ($absN / 2);
-        }
+//         while ($absN > 0) {
+//             if ($absN % 2 == 1) {
+//                 $result *= $x;
+//             }
+//             $x *= $x;
+//             $absN = (int) ($absN / 2);
+//         }
 
-        return  ($n < 0) ? (float) (1 / $result) :  (float) ($result);
+//         return  ($n < 0) ? (float) (1 / $result) :  (float) ($result);
         
-        //Or Recursive
-        if($n == 0) return 1;
+//         //Or Recursive
+//         if($n == 0) return 1;
 
-        if($n > 0){
-            $x = (float) (1 * $this->myRecursivePow($x, $n));
-        }else{
-            $x = (float) (1 / $this->myRecursivePow($x, $n));
-        }
-        return $x;
+//         if($n > 0){
+//             $x = (float) (1 * $this->myRecursivePow($x, $n));
+//         }else{
+//             $x = (float) (1 / $this->myRecursivePow($x, $n));
+//         }
+//         return $x;
         
         //Another Approch
-        //echo $n > 0 ? myPow($x, $n) : 1 / myPow($x, $n);
+        return  $n > 0 ? $this->myPowAnother($x, $n) : 1 / $this->myPowAnother($x, $n);
     }
 
     function myRecursivePow($x, $n) {
@@ -49,15 +49,15 @@ class Solution {
     }
     
     //Another Approch
-    function myPowAnother(float $x, $n) { //2,4
+    function myPowAnother(float $x, $n) { 
         if($n == 0){
             return 1;
         }
         if($n % 2 == 0){
-            return (float) myPow($x * $x, $n/2);  // (2)
+            return (float) $this->myPowAnother($x * $x, $n/2);  
         }
         else{
-            return (float) $x * myPow($x * $x, $n/2);
+            return (float) $x * $this->myPowAnother($x * $x, $n/2);
         }
     }
     
