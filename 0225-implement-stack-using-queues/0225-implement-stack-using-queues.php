@@ -16,10 +16,10 @@ class MyStack {
      */
     function push($x) {
         $length = count($this->items);
-        array_push($this->items, $x);
+        array_push($this->items, $x); //$x = 3 then 1,2,3
         if(!$this->empty()){
-            for($i = 0; $i < $length; $i++){
-                    array_push($this->items,  $this->top());
+            for($i = 0; $i < $length; $i++){ //will perform //3,2,1
+                    array_push($this->items,  $this->top()); 
                     array_shift($this->items);
             }
         }
