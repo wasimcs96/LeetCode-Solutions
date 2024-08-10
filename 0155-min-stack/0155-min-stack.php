@@ -50,37 +50,86 @@
 //     }
 // }
 
-class Pair {
-    public int $x, $y;
-    function __construct(int $x, int $y) {
-        $this->x = $x;
-        $this->y = $y;
-    }
-}
+//Time Complexity: O(1)
+//Space Complexity: O(2N)
+// class Pair {
+//     public int $x, $y;
+//     function __construct(int $x, int $y) {
+//         $this->x = $x;
+//         $this->y = $y;
+//     }
+// }
+// class MinStack {
+//     private $stack;
 
+//     public function __construct() {
+//         $this->stack = [];
+//     }
+
+//     public function push($x) {
+//         $min = empty($this->stack) ? $x : min(end($this->stack)->y, $x);
+//         array_push($this->stack, new Pair($x, $min));
+
+//     }
+
+//     public function pop() {
+//         array_pop($this->stack);
+//     }
+
+//     public function top() {
+//         return empty($stack) ? end($this->stack)->x : null;
+//     }
+
+//     public function getMin() {
+//         return empty($stack) ? end($this->stack)->y : null;
+//     }
+// }
+
+// Time Complexity: O(1)
+// Space Complexity: O(N)
 class MinStack {
-    private $stack;
+    private $st;
+    private $mini;
 
     public function __construct() {
-        $this->stack = [];
+        $this->st = [];
+        $this->mini = PHP_INT_MAX;
     }
 
-    public function push($x) {
-        $min = empty($this->stack) ? $x : min(end($this->stack)->y, $x);
-        array_push($this->stack, new Pair($x, $min));
-
+    public function push($value) {
+        $val = (int)$value;
+        if (empty($this->st)) {
+            $this->mini = $val;
+            array_push($this->st, $val);
+        } else {
+            if ($val < $this->mini) {
+                array_push($this->st, 2 * $val - $this->mini);
+                $this->mini = $val;
+            } else {
+                array_push($this->st, $val);
+            }
+        }
     }
 
     public function pop() {
-        array_pop($this->stack);
+        if (empty($this->st)) return;
+
+        $val = array_pop($this->st);
+        if ($val < $this->mini) {
+            $this->mini = 2 * $this->mini - $val;
+        }
     }
 
     public function top() {
-        return empty($stack) ? end($this->stack)->x : null;
+        $val = end($this->st);
+        if ($val < $this->mini) {
+            return $this->mini;
+        }  
+        return $val;
     }
 
     public function getMin() {
-        return empty($stack) ? end($this->stack)->y : null;
+        return $this->mini;
     }
 }
 
