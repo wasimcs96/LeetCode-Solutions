@@ -35,11 +35,17 @@ class MinStack {
      * @return Integer
      */
     function getMin() {
-        $min = PHP_INT_MAX;
-        for ($i = $this->top; $i >= 0; $i--) {
-            $min = min($min, $this->stack[$i]);
+        // $min = PHP_INT_MAX;
+        // for ($i = $this->top; $i >= 0; $i--) {
+        //     $min = min($min, $this->stack[$i]);
+        // }
+        // return $min;
+        if(!empty($this->stack)) {
+            $temp = $this->stack;
+            sort($temp);
+            return $temp[0];
         }
-        return $min;
+        return null;
     }
 }
 
