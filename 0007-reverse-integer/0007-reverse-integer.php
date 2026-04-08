@@ -13,9 +13,10 @@ class Solution {
 
             // Remove last digit from x
             $x = (int)($x / 10);
-
+            
+            //-2147483648 to 2147483647
             // Check overflow BEFORE multiplying
-            if ($result > 214748364 || ($result == 214748364 && $digit > 7)) {
+            if ($result > 214748364 || ($result == 214748364 && $digit > 7)) { //2147483647, check are adding 7 or less
                 return 0;
             }
             if ($result < -214748364 || ($result == -214748364 && $digit < -8)) {
