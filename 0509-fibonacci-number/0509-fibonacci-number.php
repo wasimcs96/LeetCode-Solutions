@@ -5,10 +5,10 @@ class Solution {
      * @return Integer
      */
     function fib($n) {
-      if ($n <= 1 ) {
-        return $n;
-      }
-      $ans =   $this->fib($n-1) + $this->fib($n-2);
-      return $ans;
+        if($n == 0) return 0;
+        if($n == 1) return 1;
+
+        $fib = $this->fib($n-1)+$this->fib($n-2);
+        return $fib;
     }
 }
