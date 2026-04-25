@@ -10,7 +10,7 @@ class Solution {
 
         $rotatedCount = 0;
         for($i=0;$i<$count;$i++){
-            $nextIndex = (int) ($i+1) % $count;
+            $nextIndex = (int) ($i+1) % $count; //give index like -> 1,2,3,4,5,0
             if($nums[$i] > $nums[$nextIndex]) $rotatedCount++;
         }
         if($rotatedCount > 1) return false;
