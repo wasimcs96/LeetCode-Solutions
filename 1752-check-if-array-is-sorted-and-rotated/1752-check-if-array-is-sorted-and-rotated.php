@@ -6,18 +6,14 @@ class Solution {
      */
     function check($nums) {
         $count = count($nums);
-        $rotationCount = 0;
-        for($i=0;$i<$count;$i++){
-          //nextIndex give 1,2,3,4,5,1 //if length 6
-          $nextIndex = (int) ($i+1) % $count;
-          if($nums[$i] > $nums[$nextIndex]){
-             $rotationCount++;
-          }
-        }
+        if($count == 0 || $count == 1) return true;
 
-        if($rotationCount > 1){
-          return false;
+        $rotatedCount = 0;
+        for($i=0;$i<$count;$i++){
+            $nextIndex = (int) ($i+1) % $count;
+            if($nums[$i] > $nums[$nextIndex]) $rotatedCount++;
         }
-        return true;
+        if($rotatedCount > 1) return false;
+        else return true;
     }
 }
