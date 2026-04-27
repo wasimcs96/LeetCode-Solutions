@@ -16,5 +16,12 @@ class Solution {
             }
             $j++;
         }
+        // Dry Run  ->  $nums = [0, 1, 0, 3, 12]
+        // j=0: 0 skip
+        // j=1: 1!=0 -> swap(nums[0],nums[1]) -> [1,0,0,3,12], i=1
+        // j=2: 0 skip
+        // j=3: 3!=0 -> swap(nums[1],nums[3]) -> [1,3,0,0,12], i=2
+        // j=4: 12!=0-> swap(nums[2],nums[4]) -> [1,3,12,0,0], i=3
+        // Output: [1,3,12,0,0]
     }
 }
