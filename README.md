@@ -8,6 +8,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0001-two-sum](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0001-two-sum) |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0026-remove-duplicates-from-sorted-array) |
+| [0075-sort-colors](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0075-sort-colors) |
 | [0136-single-number](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0136-single-number) |
 | [0189-rotate-array](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0189-rotate-array) |
 | [0283-move-zeroes](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0283-move-zeroes) |
@@ -28,6 +29,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0026-remove-duplicates-from-sorted-array) |
+| [0075-sort-colors](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0075-sort-colors) |
 | [0125-valid-palindrome](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0125-valid-palindrome) |
 | [0189-rotate-array](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0189-rotate-array) |
 | [0283-move-zeroes](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0283-move-zeroes) |
@@ -51,4 +53,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0136-single-number](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0136-single-number) |
+## Sorting
+|  |
+| ------- |
+| [0075-sort-colors](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0075-sort-colors) |
 <!---LeetCode Topics End-->
