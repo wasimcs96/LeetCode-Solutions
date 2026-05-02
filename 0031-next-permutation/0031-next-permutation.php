@@ -4,6 +4,22 @@ class Solution {
      * @param Integer[] $nums
      * @return NULL
      */
+
+//    Intuition: Three-step algorithm:
+//   1. Find the RIGHTMOST index i where nums[i] < nums[i+1] (dip point)
+//   2. Find the RIGHTMOST index j > i where nums[j] > nums[i], swap them
+//   3. Reverse the suffix after index i (makes it the smallest arrangement)
+//   If no dip found -> array is fully descending -> reverse all (wraps to first).
+// TC: O(n)  |  SC: O(1)
+// ============================================================
+// find first one and then 3 then swap and reverse
+//    ->1,   //swap 1 and 3 like just greate number and after aswap this make sort after 3 values 23 00145
+//   2    5,  
+//          4,
+//         -> 3,
+//              0,
+//                0
+//$nums = [2, 1, 5, 4, 3, 0, 0];
     function nextPermutation(&$nums) {
         $n = count($nums); $breakPoint = -1;
 
