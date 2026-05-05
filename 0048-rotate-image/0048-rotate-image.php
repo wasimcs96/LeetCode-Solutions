@@ -4,6 +4,9 @@ class Solution {
      * @param Integer[][] $matrix
      * @return NULL
      */
+    // if you want to rotate clockwise, first transpose first column to first row and then reverse each row 
+    // if you want to rotate anti-clockwise, first transpose last column to first row and then reverse each row
+    
     // Intuition: Two-step process:
     //   1. Transpose  -> matrix[i][j] swaps with matrix[j][i] where i = n - 1 - j to get the mirror image along the main diagonal  
     //   2. Reverse each row  -> completes the 90 degree clockwise rotation
