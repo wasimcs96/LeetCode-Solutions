@@ -11,6 +11,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0031-next-permutation](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0031-next-permutation) |
 | [0048-rotate-image](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0048-rotate-image/) | Medium |
 | [0053-maximum-subarray](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0053-maximum-subarray) |
+| [0054-spiral-matrix](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0054-spiral-matrix/) | Medium |
 | [0073-set-matrix-zeroes](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0073-set-matrix-zeroes) |
 | [0075-sort-colors](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0075-sort-colors) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0121-best-time-to-buy-and-sell-stock) |
@@ -86,6 +87,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Simulation
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0054-spiral-matrix](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0054-spiral-matrix/) | Medium |
 | [2149-rearrange-array-elements-by-sign](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/2149-rearrange-array-elements-by-sign) |
 ## Union-Find
 | Problem Name | Difficulty |
@@ -95,5 +97,6 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0048-rotate-image](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0048-rotate-image/) | Medium |
+| [0054-spiral-matrix](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0054-spiral-matrix/) | Medium |
 | [0073-set-matrix-zeroes](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0073-set-matrix-zeroes) |
 <!---LeetCode Topics End-->
