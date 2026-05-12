@@ -6,41 +6,44 @@ class Solution {
      * @return Integer[]
      */
     function searchRange($nums, $target) {
-        $high = count($nums)-1; $low = 0; $key=$target; $ans = -1;
-        $fiestIndex = $this->searchFirstInsert($nums, $low, $high, $key, $ans);
-        $secondIndex = $this->searchSecondInsert($nums, $low, $high, $key, $ans);
-        return [$fiestIndex, $secondIndex];
-    }
+        $high = count($nums)-1; $low = 0;
+        if(count($nums) == 0)  return [-1, -1];
 
-    function searchFirstInsert($nums, $low, $high, $key, $ans){
+        $floorValue = $this->findFirst($nums, $low, $high, $target, $low);
+        $ceilingValue  = $this->findLast($nums, $low, $high, $target, $high);
+
+        if($floorValue > $high || $nums[$floorValue] != $target || $ceilingValue < 0) 
+            return [-1, -1];
+        else 
+            return [$floorValue, $ceilingValue];
+    }
+    
+
+  
+
+
+    function findFirst(array $nums, int $low, int $high, int $key, int $ans): int {
         if($low > $high) return $ans;
-      
+
         $mid = (int) (($low+$high) / 2);
 
-        if($nums[$mid] == $key ) {
+        if($nums[$mid] >= $key) {
             $ans = $mid;
-            return $this->searchFirstInsert($nums, $low, $mid-1, $key, $ans);
+            return $this->findFirst($nums, $low, $mid-1, $key, $ans);
         }
-        else if($nums[$mid] > $key){
-            return $this->searchFirstInsert($nums, $low, $mid-1, $key, $ans);
-        }else{
-            return $this->searchFirstInsert($nums, $mid+1, $high, $key, $ans);
-        }
+        else return $this->findFirst($nums, $mid+1, $high, $key, $ans);
     }
 
-    function searchSecondInsert($nums, $low, $high, $key, $ans){
+    function findLast(array $nums, int $low, int $high, int $key, int $ans): int {
         if($low > $high) return $ans;
-      
+
         $mid = (int) (($low+$high) / 2);
 
-        if($nums[$mid] == $key ) {
+        if($nums[$mid] <= $key) {
             $ans = $mid;
-            return $this->searchSecondInsert($nums, $mid+1, $high, $key, $ans);
+            return $this->findLast($nums, $mid+1, $high, $key, $ans);
         }
-        else if($nums[$mid] > $key){
-            return $this->searchSecondInsert($nums, $low, $mid-1, $key, $ans);
-        }else{
-            return $this->searchSecondInsert($nums, $mid+1, $high, $key, $ans);
-        }
+        else return $this->findLast($nums, $low, $mid-1, $key, $ans);
     }
+
 }
