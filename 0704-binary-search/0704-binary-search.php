@@ -6,18 +6,16 @@ class Solution {
      * @return Integer
      */
     function search($nums, $target) {
-        $high = count($nums)-1; $low = 0;
-        $ans = $this->binerySearch($nums, $low, $high, $target);
-        return $ans;
+        $low = 0; $high = count($nums)-1;
+        return $this->recursive($nums, $low, $high, $target);
     }
 
-    function binerySearch($nums, $low, $high, $key){
+    function recursive (array $arr, int $low, int $high, int $k){
         if($low > $high) return -1;
-
         $mid = (int) (($low+$high) / 2);
-
-        if($nums[$mid] == $key) return $mid;
-        elseif($nums[$mid] > $key) return $this->binerySearch($nums, $low, $mid-1, $key);
-        else return $this->binerySearch($nums, $mid+1, $high, $key);
+        if($arr[$mid] == $k) return $mid;
+        if($arr[$mid] > $k) $high = $mid - 1;
+        if($arr[$mid] < $k) $low = $mid + 1;
+        return $this->recursive($arr, $low, $high, $k);
     }
 }
