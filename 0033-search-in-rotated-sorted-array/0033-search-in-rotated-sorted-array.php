@@ -6,30 +6,36 @@ class Solution {
      * @return Integer
      */
     function search($nums, $target) {
-      $high = count($nums)-1; $low = 0; $key=$target; $ans = -1;
+        $low  = 0;
+        $high = count($nums) - 1;
+        $key=$target; 
 
-      while($low <= $high){
-          $mid = (int) (($low + $high) / 2);
-          if ($nums[$mid] == $key ){
-              return $mid;
-          }
+        while ($low <= $high) {
+            $mid = (int) (($low + $high) / 2);
 
-          if($nums[$low] <= $nums[$mid]){
-              if($nums[$low] <= $key && $key < $nums[$mid]){
-                  $high = $mid-1;
-              }else{
-                  $low = $mid+1;
-              }
-          }else{
-              if($nums[$mid] < $key && $key <= $nums[$high]){
-                  $low = $mid+1;
-              }else{
-                  $high = $mid-1;
-              }
-          }
-      }
+            if ($nums[$mid] === $key) {
+                return $mid; // Target found
+            }
 
-      return -1;
+            // Determine which half is sorted
+            if ($nums[$low] <= $nums[$mid]) {
+                // LEFT half [low .. mid] is sorted
+                if ($nums[$low] <= $key && $key < $nums[$mid]) {
+                    $high = $mid - 1; // Target is inside the sorted left half
+                } else {
+                    $low = $mid + 1;  // Target is in the rotated right half
+                }
+            } else {
+                // RIGHT half [mid .. high] is sorted
+                if ($nums[$mid] < $key && $key <= $nums[$high]) {
+                    $low = $mid + 1;  // Target is inside the sorted right half
+                } else {
+                    $high = $mid - 1; // Target is in the rotated left half
+                }
+            }
+        }
+
+        return -1; // Not found
 
         // $high = $length = count($nums)-1; $low = $start = 0; $key=$target;
         // $ans = -1;
