@@ -58,7 +58,7 @@ class Solution {
         // After swapping the values at indices i and j, we need to reverse the suffix nums[i+1..n-1] to get the next permutation. 
         // This is because the suffix is in descending order, and reversing it will give us the lowest order (first permutation) for that suffix, 
         // which is necessary to ensure that we get the next permutation in lexicographical order. In our example, after swapping the values at indices 1 and 2, we will have the array 
-        // [2, 5, 1, 4, 3, 0, 0]. We will then reverse the suffix starting from index 2 [1, 4, 3, 0, 0] to the end of the array, resulting in [2, 5, 0, 0, 3, 4, 1], 
+        // [2, 5, 1, 4, 3, 0, 0]. We will then reverse the suffix starting from index 2 [1, 4, 3, 0, 0] to the end of the array, resulting in [2, 3, 0, 0, 1, 4, 5], 
         // which is the next permutation of the original array [2, 1, 5, 4, 3, 0, 0].
         while($breakPoint < $n-1){
             list($nums[$breakPoint+1], $nums[$n-1]) = [$nums[$n-1], $nums[$breakPoint+1]];
