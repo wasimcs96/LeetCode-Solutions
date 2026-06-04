@@ -28,23 +28,23 @@ class Solution {
         //         if($matrix[$i][$j] === 0 && isset($hahmap[$i."-".$j])){ 
         //             $x= $i; $y = $j;
         //             while($y >= 0){
-        //             $matrix[$x][$y] = 0;
-        //             $y--;
+        //                  $matrix[$x][$y] = 0;
+        //                  $y--;
         //             }
         //             $y = $j;
         //             while($m > $y){
-        //             $matrix[$x][$y] = 0;
-        //             $y++;
+        //                  $matrix[$x][$y] = 0;
+        //                  $y++;
         //             }
         //             $x= $i; $y = $j;
         //             while($x >= 0){
-        //             $matrix[$x][$y] = 0;
-        //             $x--;
+        //                  $matrix[$x][$y] = 0;
+        //                  $x--;
         //             }
         //             $x= $i;
         //             while($n > $x){
-        //             $matrix[$x][$y] = 0;
-        //             $x++;
+        //                  $matrix[$x][$y] = 0;
+        //                  $x++;
         //             }
         //         }
         //     }
@@ -81,8 +81,8 @@ class Solution {
                 }
             }
         }
-        //Output of above loop will be [[0,1,0,0],
-        //                             [0,4,0,2],
+        //Output of above loop will be [[0,1,2,0],
+        //                             [3,4,5,2],
         //                             [1,3,1,5]
         //                            ]
 
@@ -93,9 +93,9 @@ class Solution {
                 }
             }
         }
-        //Output of above loop will be [[0,1,0,0],
-        //                             [0,0,0,0],
-        //                             [1,3,0,5]
+        //Output of above loop will be [[0,1,2,0],
+        //                             [3,4,5,0],
+        //                             [1,3,1,0]
         //                            ]
         if($firstRowZero) { 
             for($j=0; $j<$m; $j++) {
@@ -103,8 +103,8 @@ class Solution {
             }
         }
         //Output of above loop will be [[0,0,0,0],
-        //                             [0,0,0,0],
-        //                             [1,3,0,5]
+        //                             [3,4,5,0],
+        //                             [1,3,1,0]
         //                            ]
         if($firstColZero) {
             for($i=0; $i<$n; $i++) {
@@ -112,9 +112,9 @@ class Solution {
             }
         }
         //Output of above loop will be [[0,0,0,0],
-        //                             [0,0,0,0],
-        //                             [0,3,0,0]
-        //                            ] 
+        //                             [0,4,5,0],
+        //                             [0,3,1,0]
+        //                            ]
         }
 
         
