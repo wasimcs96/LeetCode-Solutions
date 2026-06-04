@@ -60,7 +60,7 @@ class Solution {
 
         // Initialize hash map with all numbers as keys and 0 as value (indicating unvisited) 
         for($i = 0; $i < $count; $i++){
-        $hash[$nums[$i]] = 0;
+            $hash[$nums[$i]] = 0;
         }
         // Iterate through each number in the hash map 
         foreach($hash as $key => $val){
@@ -87,6 +87,26 @@ class Solution {
             }
         }
         return $maxCount;
+
+        //Sort Version
+        // $max = 0; $tempSeqCount = 1; $hashMap = [];
+        // $hashMap = array_flip($nums);
+        // foreach ($hashMap as $key => $value) { 
+        //     $hashMap[$key] = 0;
+        // }
+        // foreach ($hashMap as $key => $value) { 
+        //     if(!isset($hashMap[$key-1])){
+        //         $tempCount = 1;
+        //         while(isset($hashMap[$key+$tempCount])){
+        //             unset($hashMap[$key+$tempCount]);
+        //             $tempCount++;
+        //         }
+        //         $hashMap[$key] = $tempCount;
+        //         $max= max($max, $tempCount);
+        //     }
+            
+        // }
+        // echo $max;
     }
 
 }
