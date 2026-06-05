@@ -5,40 +5,42 @@ class Solution {
      * @return Integer[]
      */
     function majorityElement($nums) {
-      $ans = [];
-      $el_1="";  $el_2="";
-      $c1=0; $c2=0;
-      
-      for($i=0;$i<count($nums);$i++){
-        if($c1==0 && $el_2 != $nums[$i]){
-          $el_1=$nums[$i];
-          $c1=1;
-        }elseif($c2==0 && $el_1 != $nums[$i]){
-          $el_2=$nums[$i];
-          $c2=1;
+        $candidate_1 = $candidate_2 = null;
+        $count_1 = $count_2 = 0;
+        $ans = [];
+
+        foreach($nums as $num){
+            if($count_1 === 0 && $num !== $candidate_2){
+                $candidate_1 = $num;
+                $count_1++;
+            }elseif($count_2 === 0 && $num !==$candidate_1){
+                $candidate_2 = $num;
+                $count_2++;
+            }elseif($num === $candidate_1){
+                $count_1++;
+            }elseif($num === $candidate_2){
+                $count_2++;
+            }else{
+                $count_1--;
+                $count_2--;
+            }
         }
-        elseif($nums[$i] == $el_1){
-          $c1++;
-        }elseif($nums[$i] == $el_2){
-          $c2++;
-        }else{
-          $c1--; $c2--;
+
+        $firstCandidateCount = $secondCandidateCount = 0;
+        foreach($nums as $num){
+            if($num == $candidate_1){
+                $firstCandidateCount++;
+            }
+            elseif($num == $candidate_2){
+                $secondCandidateCount++;
+            }
         }
-      }
 
-      $c1=0;  $c2=0;
-      for($i=0;$i<count($nums);$i++){
-        if($el_1 == $nums[$i]) $c1++;
-        if($el_2 == $nums[$i]) $c2++;
-      }
+        $eligibleCandidateCounter = (int) (count($nums)/3);
+        if($firstCandidateCount != 0 && $firstCandidateCount > $eligibleCandidateCounter) $ans[] = $candidate_1;
+        if($secondCandidateCount != 0 && $secondCandidateCount > $eligibleCandidateCounter) $ans[] = $candidate_2;
 
-      if($c1 > (int) (count($nums) / 3)){
-        $ans[] = $el_1;
-      }
+        return $ans;
 
-      if($c2 > (int) (count($nums) / 3)){
-        $ans[] = $el_2;
-      }
-      return $ans; 
     }
 }
