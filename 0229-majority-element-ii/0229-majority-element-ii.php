@@ -13,7 +13,7 @@ class Solution {
             if($count_1 === 0 && $num !== $candidate_2){
                 $candidate_1 = $num;
                 $count_1++;
-            }elseif($count_2 === 0 && $num !==$candidate_1){
+            }elseif($count_2 === 0 && $num !== $candidate_1){
                 $candidate_2 = $num;
                 $count_2++;
             }elseif($num === $candidate_1){
