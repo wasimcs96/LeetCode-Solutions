@@ -25,6 +25,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0153-find-minimum-in-rotated-sorted-array/) | Medium |
 | [0169-majority-element](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0169-majority-element) |
 | [0189-rotate-array](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0189-rotate-array) |
+| [0229-majority-element-ii](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0229-majority-element-ii/) | Medium |
 | [0283-move-zeroes](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0283-move-zeroes) |
 | [0485-max-consecutive-ones](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0485-max-consecutive-ones) |
 | [0560-subarray-sum-equals-k](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0560-subarray-sum-equals-k/) | Medium |
@@ -38,6 +39,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0073-set-matrix-zeroes](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0073-set-matrix-zeroes) |
 | [0128-longest-consecutive-sequence](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0128-longest-consecutive-sequence) |
 | [0169-majority-element](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0169-majority-element) |
+| [0229-majority-element-ii](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0229-majority-element-ii/) | Medium |
 | [0560-subarray-sum-equals-k](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0560-subarray-sum-equals-k/) | Medium |
 ## Math
 | Problem Name | Difficulty |
@@ -85,6 +87,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0075-sort-colors](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0075-sort-colors) |
 | [0169-majority-element](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0169-majority-element) |
+| [0229-majority-element-ii](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0229-majority-element-ii/) | Medium |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -94,6 +97,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0169-majority-element](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0169-majority-element) |
+| [0229-majority-element-ii](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0229-majority-element-ii/) | Medium |
 ## Simulation
 | Problem Name | Difficulty |
 | ------- | ------- |
