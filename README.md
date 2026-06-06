@@ -7,6 +7,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0001-two-sum](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0001-two-sum) |
+| [0015-3sum](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0015-3sum/) | Medium |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0031-next-permutation](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0031-next-permutation) |
 | [0033-search-in-rotated-sorted-array](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0033-search-in-rotated-sorted-array/) | Medium |
@@ -52,6 +53,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0015-3sum](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0015-3sum/) | Medium |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0031-next-permutation](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0031-next-permutation) |
 | [0075-sort-colors](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0075-sort-colors) |
@@ -85,6 +87,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0015-3sum](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0015-3sum/) | Medium |
 | [0075-sort-colors](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0075-sort-colors) |
 | [0169-majority-element](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0169-majority-element) |
 | [0229-majority-element-ii](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0229-majority-element-ii/) | Medium |
