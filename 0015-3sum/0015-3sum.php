@@ -5,7 +5,7 @@ class Solution {
      * @return Integer[][]
      */
     function threeSum($nums) {
-//       $hashMap = $ans = [];
+        $hashMap = $ans = [];
 //       for($i=0;$i<count($nums);$i++){
 //         $hashMap = [];
 //         for($j=$i+1;$j<count($nums);$j++){
