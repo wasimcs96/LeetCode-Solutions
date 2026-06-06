@@ -43,8 +43,9 @@ class Solution {
                 $j++;
             }else{
                 $temp_ans = [$nums[$i], $nums[$j], $nums[$k]];
-                sort($temp_ans);
-                $ans[$temp_ans[0]."_".$temp_ans[1]."_".$temp_ans[2]] = $temp_ans;
+                //sort($temp_ans);
+                //$ans[$temp_ans[0]."_".$temp_ans[1]."_".$temp_ans[2]] = $temp_ans;
+                $ans[] = $temp_ans;
                 $j++;
                 $k--;
                 while($j<$k && $nums[$j] == $nums[$j-1])  $j++;
@@ -52,7 +53,7 @@ class Solution {
             }
         }
     }
-      return !empty($ans) ? array_values($ans) : [];
+      return $ans; //!empty($ans) ? array_values($ans) : [];
     }
      
 }
