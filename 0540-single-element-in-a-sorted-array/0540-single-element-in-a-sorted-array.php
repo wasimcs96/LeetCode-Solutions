@@ -6,39 +6,38 @@ class Solution {
      */
     function singleNonDuplicate($nums) {
         $length = count($nums);
-        $low = 0; $high = $length-1; 
+        $left = 0;
+        $right = $length - 1;
 
-        if($length == 1 || $nums[0] != $nums[1]){
-            return $nums[0];
-        }
-        if($nums[$high] != $nums[$high-1]){
-            return $nums[$high];
-        }
-        
-        while($low <= $high){
-          $mid = (int) (($low+$high)/2);
-      
-          $midIsEven = ($mid+1) % 2 == 0 ? true : false;
+        if($length == 1) return $nums[0];
 
-          if($nums[$mid] != $nums[$mid-1] && $nums[$mid] != $nums[$mid+1]){
-              return $nums[$mid];
-          }
-         
+        if($nums[0] != $nums[1]) return $nums[0];
         
-          if($midIsEven){
-            if($nums[$mid] == $nums[$mid-1]){
-                $low = $mid+1;
-            }else{
-                $high = $mid-1;
+        if($nums[$right] != $nums[$right-1]) return $nums[$right];
+        
+        while($left <= $right){
+            $mid = (int) (($left+$right) / 2);
+
+            if($nums[$mid] != $nums[$mid-1] && $nums[$mid] != $nums[$mid+1]){
+                break;
             }
-          }else{
-            if($mid != $high && $nums[$mid] == $nums[$mid+1]){
-                $low = $mid+2;
+            
+            $midIsEven = ($mid+1) % 2 == 0 ? true : false;
+
+            if($midIsEven){
+                if($nums[$mid-1] == $nums[$mid]){
+                    $left = $mid + 1;
+                }else{
+                    $right = $mid - 1;
+                }
             }else{
-                $high = $mid-2;
+                if($mid != $right && $nums[$mid+1] == $nums[$mid]){
+                    $left = $mid + 2;
+                }else{
+                    $right = $mid - 2;
+                }
             }
-          }
         }
         return $nums[$mid];
-      }
+    }
 }
