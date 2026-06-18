@@ -5,26 +5,27 @@ class Solution {
      * @param Integer $h
      * @return Integer
      */
-    function minTimeToReachTopOfPile($piles,$mid){
-        $hours = 0;
-        foreach ($piles as $value) {
-          $hours += ceil($value / $mid);
-        }
-        return $hours;
-    }
-
     function minEatingSpeed($piles, $h) {
-        $low = 1; $high = max($piles);
-        while ($low <= $high){
-          $mid = (int)(($low + $high)/2);
-          $hours = $this->minTimeToReachTopOfPile($piles,$mid);
-          if($hours <= $h){
-            $high = $mid-1;
-          }else{
-            $low = $mid+1;
-          }
-        }
-        return $low;
-    }
+        $left = 1; 
+        $right = max($piles); $ans = 0;
 
+        while($left <= $right){
+            $mid = (int) (($left+$right) / 2);
+            $tempHour = 0;
+            for($i=0;$i<count($piles);$i++){
+                $tempHour += ceil( $piles[$i] / $mid);
+            }
+
+            if($tempHour == $h){
+                $ans = min($mid, $ans);
+                $right = $mid-1;
+            }elseif($tempHour > $h){
+                //$ans = $mid;
+                $left = $mid + 1;
+            }else{
+                $right = $mid-1;
+            }
+        }
+        return $left;
+    }
 }
