@@ -7,7 +7,7 @@ class Solution {
      */
     function minEatingSpeed($piles, $h) {
         $left = 1; 
-        $right = max($piles); $ans = 0;
+        $right = max($piles); $ans = PHP_INT_MAX;
 
         while($left <= $right){
             $mid = (int) (($left+$right) / 2);
