@@ -5,39 +5,40 @@ class Solution {
      * @param Integer $days
      * @return Integer
      */
-    function getPossibleShipWeight($nums, $mid, $days){
-      $cnt = 0; $cntDays = 0;
-      foreach ($nums as $value) {
-        if($mid >= $cnt+$value){
-          $cnt = $cnt + $value;
-        }else{
-          $cntDays++;
-          $cnt = $value;
-        }
-      }
+    function shipWithinDays(array $weights, int $days): int
+    {
+        $low  = max($weights);       // Minimum: must carry the heaviest package
+        $high = array_sum($weights); // Maximum: carry everything in one day
 
-      if($cnt >= $mid){
-        $cntDays += (int)($cnt/$mid);
-      }else{
-        $cntDays++;
-      }
-      if($cntDays <= $days) return true;
-      return false;
+        while ($low <= $high) {
+            $mid = $low + intdiv($high - $low, 2);
+
+            if ($this->canShip($weights, $mid, $days)) {
+                $high = $mid - 1; // Feasible → try smaller capacity
+            } else {
+                $low = $mid + 1;  // Not feasible → need more capacity
+            }
+        }
+
+        return $low; // Smallest capacity that works
+    }
+    function canShip(array $weights, int $capacity, int $days): bool
+    {
+        $daysNeeded  = 1; // We always need at least 1 day
+        $currentLoad = 0; // Weight loaded on the current day
+
+        foreach ($weights as $w) {
+            if ($currentLoad + $w > $capacity) {
+                // This package overflows today's limit → start a new day
+                $daysNeeded++;
+                $currentLoad = $w; // New day starts with this package
+            } else {
+                $currentLoad += $w; // Load this package on the current day
+            }
+        }
+
+        return $daysNeeded <= $days; // Feasible if finished within $days
     }
 
-    function shipWithinDays($weights, $days) {
-      $sum = array_sum($weights);
-      
-      $low = max($weights); $high = $sum;
-      while ($low <= $high){
-        $mid = (int)(($low + $high)/2);
-        $isPossible = $this->getPossibleShipWeight($weights, $mid, $days);
-        if($isPossible){
-          $high = $mid-1;
-        }else{
-          $low = $mid+1;
-        }
-      }
-      return $low;
-    }
+    
 }
