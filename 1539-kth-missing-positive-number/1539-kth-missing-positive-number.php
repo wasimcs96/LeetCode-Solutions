@@ -79,13 +79,20 @@ class Solution {
         * k = 5
         *
         * After search:
-        * low = 4
+        * low  = 4
+        * high = 3
         *
         * Answer = low + k
         *        = 4 + 5
         *        = 9
         */
         //return $low + $k;
+        
+        /* high = 3
+        *
+        * Answer = high + 1 + k 
+        *        = 4 + 1 + 5
+        */
         return $high + 1 + $k;
     }
 }
