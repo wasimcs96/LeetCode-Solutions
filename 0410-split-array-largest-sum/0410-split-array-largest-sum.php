@@ -6,38 +6,43 @@ class Solution {
      * @return Integer
      */
     function splitArray($nums, $k) {
-        $max = array_sum($nums); $min = max($nums);
+        $low  = max($nums);       // Each subarray must hold at least the largest element
+        $high = array_sum($nums); // Worst case: one subarray for the whole array
 
-        // for($i = $min; $i <= $max; $i++){
+        // for($i = $low; $i <= $high; $i++){
         //   if(canSplitArray($nums, $k, $i) == true){
         //     echo $i; break;
         //   }
         // }
 
-        while($min <= $max ){
-          $mid = (int)(($min + $max) / 2);
-          if($this->canSplitArray($nums, $k, $mid)){
-            $min = $mid+1; 
-          }else{
-            $max = $mid-1;
-          }
+        while ($low <= $high) {
+            $mid = $low + intdiv($high - $low, 2);
+
+            if ($this->canSplitArray($nums, $k, $mid)) {
+                $high = $mid - 1; // Feasible → try smaller max sum
+            } else {
+                $low = $mid + 1;  // Not feasible → increase the sum limit
+            }
         }
 
-        return $min;
+        return $low; // Minimum possible largest subarray sum
     }
 
-    function canSplitArray($arr, $k, $sum){
-      $length = count($arr)-1; 
-      $cnt = 0; $cntArr = 1;
-      for ($j=0; $j<= $length ; $j++) {
-        if($arr[$j] + $cnt <= $sum){ 
-          $cnt += $arr[$j];
-        }else{
-          $cnt = $arr[$j];
-          $cntArr++;
+    function canSplitArray(array $arr, int $k, int $maxSum): bool
+    {
+        $partsNeeded = 1; // Start with one subarray
+        $currentSum  = 0;
+
+        foreach ($arr as $val) {
+            if ($currentSum + $val <= $maxSum) {
+                $currentSum += $val; // Extend the current subarray
+            } else {
+                // Start a new subarray with this element
+                $partsNeeded++;
+                $currentSum = $val;
+            }
         }
-      }
-      return $cntArr >  $k ? true : false;
+
+        return $partsNeeded <= $k; // Feasible if within $k splits
     }
-    
 }
