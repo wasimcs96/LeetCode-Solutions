@@ -5,13 +5,12 @@ class Solution {
      * @return String
      */
     function reverseWords($s) {
-        $strArr = []; $finalStr = "";
-        $tempWord = "";
         $s = trim($s);
         $stringLength = strlen($s);
 
         if($stringLength == 0) return "";
 
+        $tempWord = ""; $finalStr = "";
         for($i=0;$i<$stringLength;$i++){
             $str = $s[$i];
             
