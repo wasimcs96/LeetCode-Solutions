@@ -5,19 +5,46 @@ class Solution {
      * @return String
      */
     function removeOuterParentheses($s) {
-        $ans = ""; $openParenthesisCount = 0;
+        // String to store the final result after removing outermost parentheses
+        $ans = "";
 
-          for($i=0;$i<strlen($s);$i++){
+        // Tracks the number of currently open '(' parentheses
+        // It increases when we see '(' and decreases when we see ')'
+        $openParenthesisCount = 0;
+
+        // Traverse each character of the input string
+        for ($i = 0; $i < strlen($s); $i++) {
+
+            // Get the current character
             $str = $s[$i];
 
-            if($str == "("){
+            // If the current character is an opening parenthesis
+            if ($str == "(") {
+
+                // Increase the count because a new '(' is encountered
                 $openParenthesisCount++;
-                if($openParenthesisCount != 1) $ans .= $str;
-            }else{
+
+                // If count is NOT 1, it means this is NOT the outermost '('
+                // So, keep it in the answer
+                if ($openParenthesisCount != 1) {
+                    $ans .= $str;
+                }
+
+            } else {
+
+                // Current character is ')'
+                // Decrease the count because one '(' is now closed
                 $openParenthesisCount--;
-                if($openParenthesisCount != 0) $ans .= $str;
+
+                // If count is NOT 0, it means this is NOT the outermost ')'
+                // So, keep it in the answer
+                if ($openParenthesisCount != 0) {
+                    $ans .= $str;
+                }
             }
-          }
-          return $ans;
+        }
+
+        // Return the string after removing all outermost parentheses
+        return $ans;
     }
 }
