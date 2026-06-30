@@ -5,30 +5,31 @@ class Solution {
      * @return String
      */
     function reverseWords($s) {
-      $ans = ""; $temp = ""; $s = trim($s);
-      $low = 0; $high = strlen($s)-1;
+        $strArr = []; $finalStr = "";
+        $tempWord = "";
+        $s = trim($s);
+        $stringLength = strlen($s);
 
-      while ($low <= $high){ 
-          if($s[$low] != ' '){
-            $temp .= $s[$low];
-          } else {
-              if($ans != ""){
-                $ans = trim($temp)." ".trim($ans);
-              }else{
-                $ans = trim($temp);
-              }
-              $temp = "";
-          }
-        $low++;
-      }
+        if($stringLength == 0) return "";
 
-      if($temp != ' ') {
-        if($ans != ""){
-          $ans = trim($temp)." ".trim($ans);
-        }else{
-          $ans = trim($temp);
+        for($i=0;$i<$stringLength;$i++){
+            $str = $s[$i];
+            
+            if($str != ' '){
+                $tempWord .= $str;
+            }else{
+                $tempWord = trim($tempWord);
+
+                if(!empty($finalStr)) $finalStr  = $tempWord ." ". trim($finalStr);
+                else $finalStr = $tempWord;
+
+                $tempWord = "";
+            }
         }
-      }
-      return $ans;
+        $tempWord = trim($tempWord);
+        if(!empty($finalStr)) $finalStr  = $tempWord ." ". trim($finalStr);
+        else $finalStr = $tempWord;
+        
+        return $finalStr;
     }
 }
