@@ -5,23 +5,25 @@ class Solution {
      * @return String
      */
     function longestCommonPrefix($strs) {
-        $length = count($strs);
-        if($length == 1) return $strs[0];
-        $ans = ""; $chrIndex=0;$isCommon = true; 
-        while($isCommon){
-          for($i = 1; $i < $length; $i++) {
-            $currStr = $strs[$i]; 
-            if(isset($currStr[$chrIndex]) && $currStr[$chrIndex] == $strs[0][$chrIndex]){
-              $isCommon = true;
-            }else{
-              $isCommon = false;
-              break;
+        if(empty($strs)) return "";
+    
+        if(count($strs) == 1) return $strs[0];
+
+        sort($strs);
+        $first = $strs[0];
+        $last = $strs[count($strs) - 1];
+
+        $commonPrefix = "";
+        $minLength = min(strlen($first), strlen($last));
+
+        for ($i = 0; $i < $minLength; $i++) {
+            if ($first[$i] === $last[$i]) {
+                $commonPrefix .= $first[$i];
+            } else {
+                break;
             }
-          }
-          if($isCommon) {
-            $ans .= $strs[0][$chrIndex]; $chrIndex++;
-          }
         }
-        return $ans;
-    }
+
+        return $commonPrefix;
+        }
 }
