@@ -52,6 +52,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0169-majority-element](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0169-majority-element) |
 | [0205-isomorphic-strings](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0205-isomorphic-strings/) | Easy |
 | [0229-majority-element-ii](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0229-majority-element-ii/) | Medium |
+| [0242-valid-anagram](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0242-valid-anagram/) | Easy |
 | [0560-subarray-sum-equals-k](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0560-subarray-sum-equals-k/) | Medium |
 ## Math
 | Problem Name | Difficulty |
@@ -81,6 +82,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0125-valid-palindrome](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0125-valid-palindrome) |
 | [0151-reverse-words-in-a-string](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0151-reverse-words-in-a-string/) | Medium |
 | [0205-isomorphic-strings](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0205-isomorphic-strings/) | Easy |
+| [0242-valid-anagram](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0242-valid-anagram/) | Easy |
 | [0796-rotate-string](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0796-rotate-string/) | Easy |
 | [1021-remove-outermost-parentheses](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/1021-remove-outermost-parentheses/) | Easy |
 | [1903-largest-odd-number-in-string](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/1903-largest-odd-number-in-string/) | Easy |
@@ -111,6 +113,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0075-sort-colors](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0075-sort-colors) |
 | [0169-majority-element](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0169-majority-element) |
 | [0229-majority-element-ii](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0229-majority-element-ii/) | Medium |
+| [0242-valid-anagram](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0242-valid-anagram/) | Easy |
 | [1552-magnetic-force-between-two-balls](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/1552-magnetic-force-between-two-balls/) | Medium |
 ## Divide and Conquer
 | Problem Name | Difficulty |
