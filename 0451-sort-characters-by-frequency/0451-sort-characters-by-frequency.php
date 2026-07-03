@@ -5,32 +5,35 @@ class Solution {
      * @return String
      */
     function frequencySort($s) {
-      $ans = "";
-      if(empty($s)) return $ans;
+        $sLength = strlen($s);
+        if($sLength <= 1) return $s;
 
-      $chrArr=array();
-      $strLen = strlen($s);
-
-      for($i=0;$i<$strLen;$i++){
-        $chrArr[ord($s[$i])] = isset($chrArr[ord($s[$i])]) ? ++$chrArr[ord($s[$i])] : 1;
-      }
-
-      $chrCountMap=array();
-      foreach($chrArr as $chr => $count){
-          $chrCountMap[$count][] = $chr;
-      }
-      krsort($chrCountMap); 
-
-      foreach($chrCountMap as $key=>$insideArr){
-        sort($insideArr);
-        foreach($insideArr as $value){
-          $j=$key;
-          while($j>0){
-            $ans .= chr($value);
-            $j--;
-          }
+        $frequancyMap = [];
+        foreach(str_split($s) as $char){
+            if(!isset($frequancyMap[$char])){
+                $frequancyMap[$char] = 1;
+            }else{
+                $frequancyMap[$char]++;
+            }
         }
-      }
-      return $ans;
+        
+        $finalHashMap = [];
+        foreach($frequancyMap as $char => $count){
+            $finalHashMap[$count][] = $char;
+        }
+        krsort($finalHashMap);
+        
+        $answer = "";
+        foreach($finalHashMap as $count => $chars){
+            sort($chars);
+            foreach($chars as $char){
+                $j = $count;
+                while($j--){
+                    $answer .= $char;
+                }
+                
+            }
+        }
+        return $answer;
     }
 }
