@@ -22,9 +22,9 @@ class Solution {
         ];
 
         $total = 0;
-        $i = 0;
-        while ($i < strlen($s)) {
-            if($i+1 < strlen($s) && isset($romanMap[$s[$i].$s[$i+1]])){
+        $i = 0; $slength = strlen($s);
+        while ($i < $slength) {
+            if($i+1 < $slength && isset($romanMap[$s[$i].$s[$i+1]])){
                 $total += $romanMap[$s[$i].$s[$i+1]];
                 $i += 2;
             }
