@@ -94,10 +94,7 @@ class Solution {
             //
 
             if ($result > intdiv($INT_MAX, 10)) {
-
-                return $isNegative
-                    ? $INT_MIN
-                    : $INT_MAX;
+                return $isNegative? $INT_MIN: $INT_MAX;
             }
 
             // If result is exactly
@@ -136,8 +133,6 @@ class Solution {
         }
 
         // Apply sign.
-        return $isNegative
-            ? -$result
-            : $result;
+        return $isNegative ? -$result : $result;
     }
 }
