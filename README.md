@@ -71,6 +71,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0005-longest-palindromic-substring](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0005-longest-palindromic-substring/) | Medium |
 | [0015-3sum](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0015-3sum/) | Medium |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0031-next-permutation](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0031-next-permutation) |
@@ -83,6 +84,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0005-longest-palindromic-substring](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0005-longest-palindromic-substring/) | Medium |
 | [0008-string-to-integer-atoi](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0008-string-to-integer-atoi/) | Medium |
 | [0013-roman-to-integer](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0013-roman-to-integer/) | Easy |
 | [0014-longest-common-prefix](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0014-longest-common-prefix/) | Easy |
@@ -98,6 +100,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0005-longest-palindromic-substring](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0005-longest-palindromic-substring/) | Medium |
 | [0053-maximum-subarray](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0053-maximum-subarray) |
 | [0118-pascals-triangle](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0118-pascals-triangle/) | Easy |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0121-best-time-to-buy-and-sell-stock) |
