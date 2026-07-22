@@ -5,33 +5,8 @@ class Solution {
      * @return String
      */
 
-    function reverseWords($s) {
-    trim($s);
-    $length = strlen($s);
-    if($length == 0) return "";
-
-    $tempStr = $finalStr = ""; 
-    for($i=0;$i<$length;$i++){
-        $chr = $s[$i];
-        
-        if($chr != " "){
-            $tempStr .= $chr;
-        }else{
-            $finalStr = trim($tempStr) ." ". trim($finalStr);
-            $tempStr = "";
-        }
-
-        //echo $tempStr."\n";
-    }
-    if($tempStr != ""){
-        $finalStr = trim($tempStr) ." ". trim($finalStr);
-    }
-
-
-    return trim($finalStr);
     
-}
-    function reverseWordss($s) {
+    function reverseWords($s) {
         $s = trim($s);
         $stringLength = strlen($s);
 
