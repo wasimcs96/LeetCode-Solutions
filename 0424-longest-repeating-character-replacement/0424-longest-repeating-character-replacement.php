@@ -41,7 +41,6 @@ class Solution {
             $maxRepeat = max($maxRepeat, $chars[$s[$r]]);
             if ($r - $l + 1 - $maxRepeat > $k) {
                 $chars[$s[$l]]--;
-                //$maxRepeat = min($maxRepeat, $chars[$s[$l]]);
                 $l++;
             }
             $res = max($res, $r - $l + 1);
