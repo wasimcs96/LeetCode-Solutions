@@ -20,7 +20,7 @@ class Solution {
     * Space Complexity : O(1)
     */
 
-    function numberOfSubstringsV1($s)
+    function numberOfSubstrings($s)
     {
         $k = 3;
         $strLength = strlen($s);
@@ -81,7 +81,7 @@ class Solution {
     * Then shrink the window from the left to search for more valid windows.
     */
 
-    function numberOfSubstrings($s)
+    function numberOfSubstringsV1($s)
     {
         $k = 3;
         $strLength = strlen($s);
