@@ -13,7 +13,7 @@ class Solution {
      * @return 
      */
     function deleteNode($node) {
-        if ($node !== null && $node->next !== null) {
+        if($node != ''){
             // Copy the value from the next node
             $node->val = $node->next->val;
             // Skip over the next node
