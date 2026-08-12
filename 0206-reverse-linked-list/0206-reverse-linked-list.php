@@ -15,19 +15,19 @@ class Solution {
      * @param ListNode $head
      * @return ListNode
      */
-    function reverseListV1($head) {
-        if($head == null || $head->next == null) return $head;
-        $current = $head;
-        $prev = null;
-        while($current != null){
-            $next = $current->next;
-            $current->next = $prev;
-            $prev = $current;
-            $current = $next;
-        }
-        $head = $prev;
-        return $head;
-    }
+    // function reverseList($head) {
+    //     if($head == null || $head->next == null) return $head;
+    //     $current = $head;
+    //     $prev = null;
+    //     while($current != null){
+    //         $next = $current->next;
+    //         $current->next = $prev;
+    //         $prev = $current;
+    //         $current = $next;
+    //     }
+    //     $head = $prev;
+    //     return $head;
+    // }
 
     //Recursive Approch
     function reverseList($head, $prev = null) {
