@@ -11,28 +11,64 @@
  */
 class Solution {
 
+    public $head = null;
+
     /**
      * @param ListNode $head
      * @return ListNode
      */
-        function deleteMiddle($head) {
-            if($head == null || $head->next == null) {
-                return null;
-            }
-            if($head->next->next == null) {
-                $head->next = null; 
-                return $head;
-            }
+    function deleteMiddle($head) {
+        // $this->head = $head;
+        // if($this->head == null || $this->head->next == null) {
+        //     $this->head = null;
+        //     return $this->head;
+        // }
 
-            $slowPtr = $fastPtr = $head;
-            //$fastPtr = $fastPtr->next->next; //->second approch skip 1 step approch
+        // if($this->head->next->next == null){
+        //     $this->head->next = null;
+        //     return $this->head;
+        // }
+        // $length = $this->getLength();
+        // $midNode = intval($length / 2);
 
-            while($fastPtr != null && $fastPtr->next != null) {
-                $fastPtr = $fastPtr->next->next;
-                $slowPtr = $slowPtr->next ;
-            }
-            $slowPtr->val = $slowPtr->next->val; //delete this line in second approch skip 1 step approch
-            $slowPtr->next = $slowPtr->next->next;
+        // $current = $this->head; $counter = 1;
+
+        // while($counter < $midNode){
+        //     $current = $current->next;
+        //     $counter++;
+        // }
+        // $current->next = $current->next->next;
+        // return $this->head;
+
+
+        //Fast and Slow Pointer Approch
+        if($head == null || $head->next == null) {
+            return null;
+        }
+        if($head->next->next == null) {
+            $head->next = null; 
             return $head;
         }
+
+        $slowPtr = $head;
+        $fastPtr = $head->next->next;
+
+        while($fastPtr != null && $fastPtr->next != null) {
+            $fastPtr = $fastPtr->next->next;
+            $slowPtr = $slowPtr->next ;
+        }
+        $slowPtr->next = $slowPtr->next->next;
+        return $head;
+    }
+
+    public function getLength(){
+        $length = 0;
+        $current = $this->head;
+
+        while($current != null){
+            $length++;
+            $current = $current->next;
+        }
+        return $length;
+    }
 }
