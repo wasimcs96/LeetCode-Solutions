@@ -18,6 +18,7 @@ class Solution {
      */
     function isPalindrome($head) {
         $this->head = $head;
+        //Approch -1  O(N), S(N)
         $length = $this->getLength($this->head);
         $current = $this->head; $stackArr = [];
         while($current){
@@ -32,7 +33,7 @@ class Solution {
         }
         return true;
 
-
+        //Second Approch O(N), S(1)
         $slow = $this->head;
         $fast = $this->head;
 
