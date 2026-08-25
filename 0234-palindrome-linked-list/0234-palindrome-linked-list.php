@@ -18,19 +18,19 @@ class Solution {
      */
     function isPalindrome($head) {
         $this->head = $head;
-        // $length = $this->getLength($this->head);
-        // $current = $this->head; $stackArr = [];
-        // while($current){
-        //     $stackArr[] = $current->val;
-        //     $current = $current->next;
-        // }
-        // $current = $this->head;
-        // while($length >= 1){
-        //     if($current->val !=  $stackArr[$length-1]) return false;
-        //     $current = $current->next;
-        //     $length--;
-        // }
-        // return true;
+        $length = $this->getLength($this->head);
+        $current = $this->head; $stackArr = [];
+        while($current){
+            $stackArr[] = $current->val;
+            $current = $current->next;
+        }
+        $current = $this->head;
+        while($length >= 1){
+            if($current->val !=  $stackArr[$length-1]) return false;
+            $current = $current->next;
+            $length--;
+        }
+        return true;
 
 
         $slow = $this->head;
