@@ -33,6 +33,34 @@ class Solution {
         }
         return true;
 
+        //Another Approch Using make a string
+        //         $str = "";
+        //         if($head == null || $head->next == null) return true;
+        //         $current  = $head;
+        //         $prev = null;
+        //         while($current != null) {
+        //             $str .=	$current->val;
+        //             $next = $current->next;
+        //             $current->next = $prev;
+        //             $prev = $current;
+        //             $current = $next;
+        //         }
+
+        //         $str1 = "";
+        //         $head = $prev;
+        //         $current  = $head;
+        //         while($current != null) {
+        //             $str1 .=	$current->val;
+        //             $current = $current->next;
+        //         }
+
+        //         if($str1 == $str){
+        //             return true;
+        //         }
+        //         return false;
+        
+        // Amother Approch usng make a stack and perform push and pop opration at last if stack is empay then retur true
+
         //Second Approch O(N), S(1)
         $slow = $this->head;
         $fast = $this->head;
