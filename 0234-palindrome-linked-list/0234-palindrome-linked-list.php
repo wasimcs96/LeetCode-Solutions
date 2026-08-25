@@ -19,19 +19,19 @@ class Solution {
     function isPalindrome($head) {
         $this->head = $head;
         //Approch -1  O(N), S(N)
-        $length = $this->getLength($this->head);
-        $current = $this->head; $stackArr = [];
-        while($current){
-            $stackArr[] = $current->val;
-            $current = $current->next;
-        }
-        $current = $this->head;
-        while($length >= 1){
-            if($current->val !=  $stackArr[$length-1]) return false;
-            $current = $current->next;
-            $length--;
-        }
-        return true;
+            // $length = $this->getLength($this->head);
+            // $current = $this->head; $stackArr = [];
+            // while($current){
+            //     $stackArr[] = $current->val;
+            //     $current = $current->next;
+            // }
+            // $current = $this->head;
+            // while($length >= 1){
+            //     if($current->val !=  $stackArr[$length-1]) return false;
+            //     $current = $current->next;
+            //     $length--;
+            // }
+            // return true;
 
         //Another Approch Using make a string
         //         $str = "";
