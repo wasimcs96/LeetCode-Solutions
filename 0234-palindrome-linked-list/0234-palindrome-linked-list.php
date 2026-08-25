@@ -11,62 +11,73 @@
  */
 class Solution {
 
+    public $head = null;
     /**
      * @param ListNode $head
      * @return Boolean
      */
     function isPalindrome($head) {
-//         $str = "";
-//         if($head == null || $head->next == null) return true;
-//         $current  = $head;
-//         $prev = null;
-//         while($current != null) {
-//             $str .=	$current->val;
-//             $next = $current->next;
-//             $current->next = $prev;
-//             $prev = $current;
-//             $current = $next;
-//         }
+        $this->head = $head;
+        // $length = $this->getLength($this->head);
+        // $current = $this->head; $stackArr = [];
+        // while($current){
+        //     $stackArr[] = $current->val;
+        //     $current = $current->next;
+        // }
+        // $current = $this->head;
+        // while($length >= 1){
+        //     if($current->val !=  $stackArr[$length-1]) return false;
+        //     $current = $current->next;
+        //     $length--;
+        // }
+        // return true;
 
-//         $str1 = "";
-//         $head = $prev;
-//         $current  = $head;
-//         while($current != null) {
-//             $str1 .=	$current->val;
-//             $current = $current->next;
-//         }
 
-//         if($str1 == $str){
-//             return true;
-//         }
-//         return false;
-        
-        //make a stack and perform push and pop opration at last if stack is empay then retur true
-        //compare half - half LL
-        //get mid point and make second half reverse and compare with first half
-        if($head == null || $head->next == null) return true;
-        $slowPtr = $fastPtr = $head;
+        $slow = $this->head;
+        $fast = $this->head;
 
-        while($fastPtr != null || $fastPtr->next != null){ //at this condition slowPtr will be lie at midpoint of LL
-            $slowPtr = $slowPtr->next;
-            $fastPtr = $fastPtr->next->next;
-        }
-        //reverse second half LL
-        $pre = null;
-        $current = $slowPtr;
-        while($current != null) {
-            $next = $current->next;
-            $current->next = $pre;
-            $pre = $current;
-            $current = $next;
+        while($fast != null && $fast->next != null){
+            $slow = $slow->next;
+            $fast = $fast->next->next;
         }
 
-        $preHead = $pre;
-        while($preHead != null && $head != null ){
-            if($preHead->val != $head->val) return false;
-            $preHead = $preHead->next;
-            $head = $head->next;
+        $rightNewNode = $this->reversList($slow);
+
+        $leftNode = $this->head;
+        $rightNode = $rightNewNode;
+
+        while($rightNode != null){
+            if($leftNode->val != $rightNode->val) {
+                $this->reversList($rightNewNode);
+                return false;
+            }
+            $leftNode = $leftNode->next;
+            $rightNode = $rightNode->next;
         }
+        $this->reversList($rightNewNode);
         return true;
+    }
+
+     public function getLength(){
+        $length = 0;
+        $current = $this->head;
+
+        while($current != null){
+            $length++;
+            $current = $current->next;
+        }
+        return $length;
+    }
+
+    function reversList($head = null) {
+        $current = $head;
+        $prev = null;
+        while($current != null){
+            $next = $current->next;
+            $current->next = $prev;
+            $prev = $current;
+            $current = $next;
+        }  
+        return $prev;     
     }
 }
