@@ -13,47 +13,34 @@ class Solution {
      * @return ListNode
      */
     function detectCycle($head) {
-        //S(N) approch
-        // $visited = [];
-        // $current = $head;
-        // $index = 0;
-        // while ($current !== null) {
-        //     $hash = spl_object_hash($current);
-        //     if (isset($visited[$hash])) {
-        //         return $current;
-        //     }
-        //     $visited[$hash] = $index; 
-        //     $index++;
-        //     $current = $current->next;
-        // }
-        // return null;
+        //hash map approch if repeat element  found then it is a loop 
+        // Approch -1 HasMap   
+        $visited = [];
+        $current = $head;
+        while ($current !== null) {
+            $hash = spl_object_hash($current);
+            if (isset($visited[$hash])) {
+                return $current;
+            }
+            $visited[$hash] = true;
+            $current = $current->next;
+        }
+        return null;
 
-        $slowPtr = $fastPtr = $head;
-        if($fastPtr == null && $fastPtr->next == null) return null;
-        while ($fastPtr != null && $fastPtr->next != null){
-            //head 1 to slowptr distance where slowptr 3 at circle start node distance = l = distance of (slowptr 3 - fast 5)
-            //fast to slow other side disctance D 5-->3
-            //total circle distance l+D
-            //fast cover distance to reach slow is  2D then slow cover D distance 
-            //then remaining distance to reach start Node circle is L bcz total circle distance l+D=L+2D so L=D
-            //so fast will meet slow after  2*D times.
-            //And we know that if start from head and cover L distance then reach start node of circle
+
+        //OR
+        //Tortoise and Hare Algorithm approch
+        $slowPtr = $head;
+        $fastPtr = $head;
+        if($fastPtr == null || $fastPtr->next == null) return null;
+
+        while($fastPtr != null && $fastPtr->next != null){
             $slowPtr = $slowPtr->next;
             $fastPtr = $fastPtr->next->next;
-            if($fastPtr != null && spl_object_hash($slowPtr) ==  spl_object_hash($fastPtr)) { 
-                $slowPtr = $head;
-                while(spl_object_hash($slowPtr) !=  spl_object_hash($fastPtr)) { 
-                    $slowPtr = $slowPtr->next;
-                    $fastPtr = $fastPtr->next;
-                }
+            
+            if($slowPtr === $fastPtr) {
                 return $slowPtr;
             }
-            
-            //To find cycle  length, then use hashmap and every node store as key and counter as value counter value will be increment by one
-        //if hash value exits thne after increment of currentcounter - hashvalue , return value will be answer
-
-        //other approch  use extra space, not allowed then just after getting collide point of slow and fast
-        //and after just make fastptr move to one step and counter increase by one then it will meet again to slow then return counter is aswer 
         }
         return null;
     }
