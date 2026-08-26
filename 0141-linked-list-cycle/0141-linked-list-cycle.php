@@ -14,6 +14,20 @@ class Solution {
      */
     function hasCycle($head) {
         //hash map approch if repeat element  found then it is a loop 
+        // Approch -1 HasMap   
+        $visited = [];
+        $current = $head;
+        while ($current !== null) {
+            $hash = spl_object_hash($current);
+            if (isset($visited[$hash])) {
+                return true;
+            }
+            $visited[$hash] = true;
+            $current = $current->next;
+        }
+        return false;
+
+
         //OR
         //Tortoise and Hare Algorithm approch
         //spl_object_hash =>point to This function returns a unique identifier for the object
@@ -28,24 +42,12 @@ class Solution {
             //     return true;
             // }
 
-            if($fastPtr !== null && $slowPtr ===  $fastPtr) { 
+            if($fastPtr !== null && $slowPtr === $fastPtr) {  //instead of using spl_object_hash you can use === for comparing object
                 return true;
             }
         }
         return false;
 
-        //Getting some issue above solution like Line 26: PHP Fatal error:  Nesting level too deep - recursive dependency? in solution.php
-        //So using hasp map approch   
-        // $visited = [];
-        // $current = $head;
-        // while ($current !== null) {
-        //     $hash = spl_object_hash($current);
-        //     if (isset($visited[$hash])) {
-        //         return true;
-        //     }
-        //     $visited[$hash] = true;
-        //     $current = $current->next;
-        // }
-        // return false;
+        
     }
 }
