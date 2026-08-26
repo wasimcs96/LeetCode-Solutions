@@ -15,22 +15,21 @@ class Solution {
     function hasCycle($head) {
         //hash map approch if repeat element  found then it is a loop 
         // Approch -1 HasMap   
-        $visited = [];
-        $current = $head;
-        while ($current !== null) {
-            $hash = spl_object_hash($current);
-            if (isset($visited[$hash])) {
-                return true;
-            }
-            $visited[$hash] = true;
-            $current = $current->next;
-        }
-        return false;
+        // $visited = [];
+        // $current = $head;
+        // while ($current !== null) {
+        //     $hash = spl_object_hash($current);
+        //     if (isset($visited[$hash])) {
+        //         return true;
+        //     }
+        //     $visited[$hash] = true;
+        //     $current = $current->next;
+        // }
+        // return false;
 
 
         //OR
         //Tortoise and Hare Algorithm approch
-        //spl_object_hash =>point to This function returns a unique identifier for the object
         $slowPtr = $head;
         $fastPtr = $head;
         if($fastPtr == null || $fastPtr->next == null) return false;
@@ -38,11 +37,8 @@ class Solution {
         while($fastPtr != null && $fastPtr->next != null){
             $slowPtr = $slowPtr->next;
             $fastPtr = $fastPtr->next->next;
-            // if($fastPtr != null && spl_object_hash($slowPtr) ==  spl_object_hash($fastPtr)) { 
-            //     return true;
-            // }
-
-            if($fastPtr !== null && $slowPtr === $fastPtr) {  //instead of using spl_object_hash you can use === for comparing object
+            
+            if($slowPtr === $fastPtr) {
                 return true;
             }
         }
