@@ -24,7 +24,11 @@ class Solution {
         while($fastPtr != null && $fastPtr->next != null){
             $slowPtr = $slowPtr->next;
             $fastPtr = $fastPtr->next->next;
-            if($fastPtr != null && spl_object_hash($slowPtr) ==  spl_object_hash($fastPtr)) { 
+            // if($fastPtr != null && spl_object_hash($slowPtr) ==  spl_object_hash($fastPtr)) { 
+            //     return true;
+            // }
+
+            if($fastPtr !== null && $slowPtr ===  $fastPtr) { 
                 return true;
             }
         }
