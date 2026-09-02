@@ -13,25 +13,9 @@ class Solution {
      * @return ListNode
      */
     function detectCycle($head) {
-        //hash map approch if repeat element  found then it is a loop 
-        // Approch -1 HasMap   
-        $visited = [];
-        $current = $head;
-        while ($current !== null) {
-            $hash = spl_object_hash($current);
-            if (isset($visited[$hash])) {
-                return $current;
-            }
-            $visited[$hash] = true;
-            $current = $current->next;
-        }
-        return null;
-
-
-        //OR
-        //Tortoise and Hare Algorithm approch
         $slowPtr = $head;
         $fastPtr = $head;
+
         if($fastPtr == null || $fastPtr->next == null) return null;
 
         while($fastPtr != null && $fastPtr->next != null){
@@ -39,6 +23,11 @@ class Solution {
             $fastPtr = $fastPtr->next->next;
             
             if($slowPtr === $fastPtr) {
+                $slowPtr = $head;
+                while($slowPtr !== $fastPtr){
+                    $slowPtr = $slowPtr->next;
+                    $fastPtr = $fastPtr->next;
+                } 
                 return $slowPtr;
             }
         }
