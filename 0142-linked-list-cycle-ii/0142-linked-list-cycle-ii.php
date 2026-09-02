@@ -43,7 +43,7 @@ class Solution {
                 while($slowPtr !== $fastPtr){
                     $slowPtr = $slowPtr->next;
                     $fastPtr = $fastPtr->next;
-                    //To get Length of circle run a loop with slow to slow or fast to fast with using a counter
+                    //To get Length of circle run a loop with slow to fast or fast to slow with using a counter (increase only one slow or fast by 1)
                 } 
                 return $slowPtr;
             }
