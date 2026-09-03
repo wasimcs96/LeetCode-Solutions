@@ -19,11 +19,7 @@ class Solution {
     function reverseKGroup($head, $k){
         $current = $head; $c = $k;
 
-        while($current != null){
-            $c--;
-            $current = $current->next;
-        }
-        if($c > 0) return $head;
+        
 
         $current = $head; $head = $tempHead = new ListNode(-1);
         while($current != null){
