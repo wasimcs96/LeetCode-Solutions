@@ -19,9 +19,15 @@ class Solution {
     function reverseKGroup($head, $k){
         $current = $head; $c = $k;
 
-        
+        while($current != null){
+            $c--;
+            $current = $current->next;
+        }
+        if($c > 0) return $head;
 
-        $current = $head; $head = $tempHead = new ListNode(-1);
+        $current = $head; 
+        $head = $tempHead = new ListNode(-1);
+
         while($current != null){
             $GSN = $current; $c = $k-1;
             while($c > 0 && $current != null){
@@ -37,7 +43,7 @@ class Solution {
                 //reverse the group
                 $HeadOfReversedGroup = $this->reversListModify($GSN, $GNN);
                 $tempHead->next = $HeadOfReversedGroup;
-                $GSN->next = $GNN;
+                //$GSN->next = $GNN;
                 $tempHead = $GSN;
 
             }else{
