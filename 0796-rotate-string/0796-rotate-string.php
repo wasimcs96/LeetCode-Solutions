@@ -6,6 +6,7 @@ class Solution {
      * @return Boolean
      */
     function rotateString($s, $goal) {
+
         $sLength = strlen($s);
         $goalLength = strlen($goal);
 
