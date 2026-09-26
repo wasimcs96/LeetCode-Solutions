@@ -48,6 +48,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1482-minimum-number-of-days-to-make-m-bouquets](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/1482-minimum-number-of-days-to-make-m-bouquets/) | Medium |
 | [1539-kth-missing-positive-number](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/1539-kth-missing-positive-number/) | Easy |
 | [1552-magnetic-force-between-two-balls](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/1552-magnetic-force-between-two-balls/) | Medium |
+| [1710-maximum-units-on-a-truck](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/1710-maximum-units-on-a-truck/) | Easy |
 | [1752-check-if-array-is-sorted-and-rotated](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/1752-check-if-array-is-sorted-and-rotated) |
 | [2149-rearrange-array-elements-by-sign](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/2149-rearrange-array-elements-by-sign) |
 ## Hash Table
@@ -162,6 +163,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0451-sort-characters-by-frequency](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0451-sort-characters-by-frequency/) | Medium |
 | [0455-assign-cookies](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0455-assign-cookies/) | Easy |
 | [1552-magnetic-force-between-two-balls](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/1552-magnetic-force-between-two-balls/) | Medium |
+| [1710-maximum-units-on-a-truck](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/1710-maximum-units-on-a-truck/) | Easy |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -228,6 +230,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0410-split-array-largest-sum](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0410-split-array-largest-sum/) | Hard |
 | [0455-assign-cookies](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0455-assign-cookies/) | Easy |
 | [0860-lemonade-change](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0860-lemonade-change/) | Easy |
+| [1710-maximum-units-on-a-truck](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/1710-maximum-units-on-a-truck/) | Easy |
 | [1903-largest-odd-number-in-string](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/1903-largest-odd-number-in-string/) | Easy |
 ## Stack
 | Problem Name | Difficulty |
