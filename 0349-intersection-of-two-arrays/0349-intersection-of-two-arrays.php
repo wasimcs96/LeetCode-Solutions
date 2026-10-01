@@ -11,10 +11,6 @@ class Solution {
         $ans = [];
         $indexArr = [];
 
-        if($count > 0 && $count > 0){
-            return $ans;
-        }
-
         for($i=0;$i<$count1;$i++){
             $indexArr[$nums1[$i]] = 1;
         }
