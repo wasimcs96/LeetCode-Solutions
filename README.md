@@ -32,6 +32,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0229-majority-element-ii](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0229-majority-element-ii/) | Medium |
 | [0268-missing-number](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0268-missing-number/) | Easy |
 | [0283-move-zeroes](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0283-move-zeroes) |
+| [0349-intersection-of-two-arrays](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0349-intersection-of-two-arrays/) | Easy |
 | [0410-split-array-largest-sum](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0410-split-array-largest-sum/) | Hard |
 | [0455-assign-cookies](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0455-assign-cookies/) | Easy |
 | [0485-max-consecutive-ones](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0485-max-consecutive-ones) |
@@ -69,6 +70,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0229-majority-element-ii](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0229-majority-element-ii/) | Medium |
 | [0242-valid-anagram](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0242-valid-anagram/) | Easy |
 | [0268-missing-number](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0268-missing-number/) | Easy |
+| [0349-intersection-of-two-arrays](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0349-intersection-of-two-arrays/) | Easy |
 | [0424-longest-repeating-character-replacement](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0424-longest-repeating-character-replacement/) | Medium |
 | [0451-sort-characters-by-frequency](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0451-sort-characters-by-frequency/) | Medium |
 | [0560-subarray-sum-equals-k](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0560-subarray-sum-equals-k/) | Medium |
@@ -109,6 +111,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0189-rotate-array](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0189-rotate-array) |
 | [0234-palindrome-linked-list](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0234-palindrome-linked-list/) | Easy |
 | [0283-move-zeroes](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/0283-move-zeroes) |
+| [0349-intersection-of-two-arrays](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0349-intersection-of-two-arrays/) | Easy |
 | [0455-assign-cookies](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0455-assign-cookies/) | Easy |
 | [2095-delete-the-middle-node-of-a-linked-list](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/2095-delete-the-middle-node-of-a-linked-list/) | Medium |
 | [2149-rearrange-array-elements-by-sign](https://github.com/wasimcs96/LeetCode-Solutions/tree/master/2149-rearrange-array-elements-by-sign) |
@@ -168,6 +171,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0229-majority-element-ii](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0229-majority-element-ii/) | Medium |
 | [0242-valid-anagram](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0242-valid-anagram/) | Easy |
 | [0268-missing-number](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0268-missing-number/) | Easy |
+| [0349-intersection-of-two-arrays](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0349-intersection-of-two-arrays/) | Easy |
 | [0451-sort-characters-by-frequency](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0451-sort-characters-by-frequency/) | Medium |
 | [0455-assign-cookies](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0455-assign-cookies/) | Easy |
 | [1552-magnetic-force-between-two-balls](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/1552-magnetic-force-between-two-balls/) | Medium |
@@ -218,6 +222,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0153-find-minimum-in-rotated-sorted-array/) | Medium |
 | [0162-find-peak-element](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0162-find-peak-element/) | Medium |
 | [0268-missing-number](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0268-missing-number/) | Easy |
+| [0349-intersection-of-two-arrays](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0349-intersection-of-two-arrays/) | Easy |
 | [0374-guess-number-higher-or-lower](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0374-guess-number-higher-or-lower/) | Easy |
 | [0410-split-array-largest-sum](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0410-split-array-largest-sum/) | Hard |
 | [0540-single-element-in-a-sorted-array](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0540-single-element-in-a-sorted-array/) | Medium |
