@@ -65,14 +65,17 @@ class Solution {
         $firstColZero = FALSE;
 
         for($i=0; $i<$n; $i++) {
-            for($j=0; $j<$m; $j++) {
-                if($matrix[$i][$j] === 0) {
-                    if ($i === 0) $firstRowZero = TRUE;
-                    if ($j === 0) $firstColZero = TRUE;
-                }
+            if($matrix[$i][0] === 0) {
+                $firstColZero = TRUE;
             }
         }
 
+        for($j=0; $j<$m; $j++) {
+            if($matrix[0][$j] === 0) {
+                $firstRowZero = TRUE;
+            }
+        }
+        
         for($i=1; $i<$n; $i++) {
             for($j=1; $j<$m; $j++) {
                 if($matrix[$i][$j] === 0){ 
