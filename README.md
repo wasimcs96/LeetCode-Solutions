@@ -314,4 +314,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0455-assign-cookies](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0455-assign-cookies/) | Easy |
+## Boyer–Moore Majority Vote Algorithm
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0229-majority-element-ii](https://github.com/wasimcs96/LeetCode-Solutions/tree/main/0229-majority-element-ii/) | Medium |
 <!---LeetCode Topics End-->
