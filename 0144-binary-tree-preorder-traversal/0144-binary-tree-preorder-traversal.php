@@ -22,7 +22,7 @@ class Solution {
         $this->preOrderTraversalRecursive($root, $answer);
         return $answer;
 
-        //return $this->inPreOrderTraversalIterative($root);
+        //return $this->preOrderTraversalIterative($root);
     }
     //DFS - PreOrder Traversal. - // Root - Left -  Right
    function preOrderTraversalRecursive(?TreeNode $root, array &$answer){
@@ -32,7 +32,7 @@ class Solution {
         $this->preOrderTraversalRecursive($root->right, $answer);
     }
 
-    function inPreOrderTraversalIterative(?TreeNode $root){
+    function preOrderTraversalIterative(?TreeNode $root){
         if($root == null) return [];
         $stack = $result = []; 
         array_push($stack, $root);
