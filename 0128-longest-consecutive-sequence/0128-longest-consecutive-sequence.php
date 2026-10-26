@@ -86,7 +86,7 @@ class Solution {
                 //print_r($hash); die;
             }
         }
-        return $maxCount;
+        //return $maxCount;
 
         //Sort Version
         // $max = 0; $tempSeqCount = 1; $hashMap = [];
@@ -107,6 +107,35 @@ class Solution {
             
         // }
         // return $max;
+
+        if (empty($nums)) {
+            return 0;
+        }
+
+        $numSet = [];
+        foreach ($nums as $num) {
+            $numSet[$num] = true;       // Build O(1)-lookup HashSet
+        }
+
+        $maxLen = 0;
+
+        foreach ($numSet as $num => $_) {
+            // Only start counting if $num is the BEGINNING of a sequence
+            // (no element just below it exists in the set)
+            if (!isset($numSet[$num - 1])) {
+                $current = $num;
+                $streak  = 1;
+
+                while (isset($numSet[$current + 1])) {
+                    $current++;
+                    $streak++;
+                }
+
+                $maxLen = max($maxLen, $streak);
+            }
+        }
+
+        return $maxLen;
     }
 
 }
