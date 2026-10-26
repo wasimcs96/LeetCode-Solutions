@@ -18,9 +18,9 @@ class Solution {
      * @return Integer[]
      */
     function postorderTraversal($root) {
-        // $answer = [];
-        // $this->postOrderTraversalRecursive($root, $answer);
-        // return $answer;
+        $answer = [];
+        $this->postOrderTraversalRecursive($root, $answer);
+        return $answer;
 
         return $this->postOrderTraversalIterative($root);
     }
