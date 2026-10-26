@@ -18,11 +18,11 @@ class Solution {
      * @return Integer[]
      */
     function preorderTraversal($root) {
-        // $answer = [];
-        // $this->preOrderTraversalRecursive($root, $answer);
-        // return $answer;
+        $answer = [];
+        $this->preOrderTraversalRecursive($root, $answer);
+        return $answer;
 
-        return $this->inPreOrderTraversalIterative($root);
+        //return $this->inPreOrderTraversalIterative($root);
     }
     //DFS - PreOrder Traversal. - // Root - Left -  Right
    function preOrderTraversalRecursive(?TreeNode $root, array &$answer){
